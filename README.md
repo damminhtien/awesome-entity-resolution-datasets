@@ -1,7 +1,7 @@
 # Awesome Entity Resolution Datasets (Curated, Practical, and Benchmark-Ready)
 
 A curated list of commonly used **Entity Resolution (ER)** datasets, grouped by the *actual task they support*.
-ER is an umbrella term—papers often mix **pairwise matching**, **deduplication/clustering**, and **knowledge-graph alignment** under one name.
+ER is an umbrella term-papers often mix **pairwise matching**, **deduplication/clustering**, and **knowledge-graph alignment** under one name.
 This README keeps the taxonomy clean so your benchmarks stay honest.
 
 > **Legend**
@@ -27,13 +27,13 @@ This README keeps the taxonomy clean so your benchmarks stay honest.
 These datasets are typically **two-source** (table A vs table B) with a **ground-truth mapping**.  
 A standard pipeline is: **blocking → feature/representation → pairwise classifier → evaluation (P/R/F1)**.
 
-### 1.1 Restaurants (Fodor’s ↔ Zagat’s)
+### 1.1 Restaurants (Fodor's ↔ Zagat's) [![Download](https://img.shields.io/badge/Download-file.zip-blue?style=for-the-badge)](https://www.cs.utexas.edu/~ml/riddle/data/restaurant.tar.gz)
 - **Task**: EM (clean-clean)
 - **Domain**: Restaurants
 - **Records**: two sources of restaurant listings
 - **Typical attributes**: name, address, city/area, phone (varies by version)
 - **Ground truth**: list of matching pairs (same restaurant)
-- **Why it’s useful**: tiny, fast iteration; classic string/noise issues (abbreviations, punctuation, misspellings)
+- **Why it's useful**: tiny, fast iteration; classic string/noise issues (abbreviations, punctuation, misspellings)
 - **Where used**: record linkage / entity matching baselines
 
 ### 1.2 Abt-Buy
@@ -42,7 +42,7 @@ A standard pipeline is: **blocking → feature/representation → pairwise class
 - **Sources**: Abt ↔ Buy
 - **Typical attributes**: product name/title, description, manufacturer/brand, price
 - **Ground truth**: matching product pairs
-- **Why it’s useful**: realistic product matching with messy titles, model numbers, brand tokens
+- **Why it's useful**: realistic product matching with messy titles, model numbers, brand tokens
 
 ### 1.3 Amazon-GoogleProducts
 - **Task**: EM (clean-clean)
@@ -50,7 +50,7 @@ A standard pipeline is: **blocking → feature/representation → pairwise class
 - **Sources**: Amazon ↔ Google Products
 - **Typical attributes**: title, description, manufacturer, price (varies by dump)
 - **Ground truth**: matching product pairs
-- **Why it’s useful**: classic noisy product listings across marketplaces
+- **Why it's useful**: classic noisy product listings across marketplaces
 
 ### 1.4 DBLP-ACM
 - **Task**: EM (clean-clean)
@@ -58,7 +58,7 @@ A standard pipeline is: **blocking → feature/representation → pairwise class
 - **Sources**: DBLP ↔ ACM
 - **Typical attributes**: title, authors, venue, year
 - **Ground truth**: matching paper pairs
-- **Why it’s useful**: strong textual similarity but with author formatting noise
+- **Why it's useful**: strong textual similarity but with author formatting noise
 
 ### 1.5 DBLP-Scholar
 - **Task**: EM (clean-clean)
@@ -66,7 +66,7 @@ A standard pipeline is: **blocking → feature/representation → pairwise class
 - **Sources**: DBLP ↔ Google Scholar-like dump
 - **Typical attributes**: title, authors, venue, year
 - **Ground truth**: matching paper pairs
-- **Why it’s useful**: much more unbalanced size; harder blocking; long-tail noise
+- **Why it's useful**: much more unbalanced size; harder blocking; long-tail noise
 
 > **Tip**: Many of the above appear in the **Database Group Leipzig** “ER Benchmark Datasets” collection as ready-to-download files.
 
@@ -85,7 +85,7 @@ They are used to test:
 - **Task**: Clustering ER (single-source)
 - **Domain**: Academic affiliations (strings)
 - **Ground truth**: clusters of equivalent affiliations
-- **Why it’s useful**: heavy abbreviation + reordering + multilingual variants; great for string normalization + clustering
+- **Why it's useful**: heavy abbreviation + reordering + multilingual variants; great for string normalization + clustering
 
 ### 2.2 Geographic Settlements
 - **Task**: Clustering ER (multi-source)
@@ -93,7 +93,7 @@ They are used to test:
 - **Sources**: multiple sources (often 4)
 - **Typical attributes**: place name, latitude, longitude (varies)
 - **Ground truth**: clusters of the same real-world location
-- **Why it’s useful**: mixes text similarity with geo proximity; reveals “near-duplicate but different place” traps
+- **Why it's useful**: mixes text similarity with geo proximity; reveals “near-duplicate but different place” traps
 
 ### 2.3 MusicBrainz (20K, 200K, 2M, 20M)
 - **Task**: Clustering ER (multi-source, scalable)
@@ -101,7 +101,7 @@ They are used to test:
 - **Sources**: typically 5 sources (synthetic duplicates across sources)
 - **Typical attributes**: artist, title, album, year, length (dataset-dependent)
 - **Ground truth**: clusters of the same recording across sources
-- **Why it’s useful**: **same schema**, enormous scale options; ideal for stress-testing blocking + clustering
+- **Why it's useful**: **same schema**, enormous scale options; ideal for stress-testing blocking + clustering
 
 ### 2.4 North Carolina Voters (5M, 10M)
 - **Task**: Clustering ER (multi-source, very large)
@@ -109,7 +109,7 @@ They are used to test:
 - **Sources**: multiple sources (constructed as N sources × 1M each in common releases)
 - **Typical attributes**: first name, last name, suburb/area, postcode (varies)
 - **Ground truth**: clusters of the same person
-- **Why it’s useful**: extreme scale + high ambiguity (common names); reveals precision/recall trade-offs in blocking
+- **Why it's useful**: extreme scale + high ambiguity (common names); reveals precision/recall trade-offs in blocking
 
 > **Tip**: For clustering datasets, report **both** quality and efficiency:
 > - Quality: pairwise-F1, B³-F1, ARI/V-measure (pick what your papers/community use)
@@ -127,14 +127,14 @@ They often come in multiple variants and preprocessings; always record the exact
 - **Domain**: academic citations
 - **Typical attributes**: title, authors, venue, year (extracted/noisy)
 - **Ground truth**: citations grouped by the same underlying paper (version-dependent)
-- **Why it’s useful**: extreme noise from extraction + inconsistent formats
+- **Why it's useful**: extreme noise from extraction + inconsistent formats
 
 ### 3.2 CiteSeer (Citation datasets)
 - **Task**: citation matching / disambiguation (often clustering)
 - **Domain**: academic citations from CiteSeer-like corpora
 - **Typical attributes**: similar to Cora (citation fields)
 - **Ground truth**: clusters/pairs depending on release
-- **Why it’s useful**: classic benchmark for disambiguation under noisy metadata
+- **Why it's useful**: classic benchmark for disambiguation under noisy metadata
 
 ---
 
@@ -148,28 +148,28 @@ They test **schema-agnostic matching** and **relation/neighbor evidence**.
 - **Domain**: Restaurants
 - **Input**: two RDF datasets
 - **Ground truth**: sameAs-style mappings
-- **Why it’s useful**: small, easy to iterate; still “real RDF” (properties + relations)
+- **Why it's useful**: small, easy to iterate; still “real RDF” (properties + relations)
 
 ### 4.2 Rexa ↔ DBLP
 - **Task**: KG instance matching / alignment
 - **Domain**: Publications and authors
 - **Input**: two large RDF graphs
 - **Ground truth**: mappings for publication and/or author entities (release-dependent)
-- **Why it’s useful**: realistic scholarly KGs; strong signals in coauthor/venue neighborhood
+- **Why it's useful**: realistic scholarly KGs; strong signals in coauthor/venue neighborhood
 
 ### 4.3 BBCmusic ↔ DBpedia
 - **Task**: KG instance matching / alignment
 - **Domain**: Music entities (artists, bands, etc.)
 - **Input**: BBCmusic KG aligned to DBpedia
 - **Ground truth**: sameAs links
-- **Why it’s useful**: massive schema heterogeneity + many types/attributes
+- **Why it's useful**: massive schema heterogeneity + many types/attributes
 
 ### 4.4 YAGO ↔ IMDb
 - **Task**: KG instance matching / alignment
 - **Domain**: Movies and related entities
 - **Input**: two huge KGs
 - **Ground truth**: sameAs links for movie entities and related nodes (release-dependent)
-- **Why it’s useful**: web-scale alignment; great for token + neighborhood + blocking research
+- **Why it's useful**: web-scale alignment; great for token + neighborhood + blocking research
 
 > **Tip**: KG alignment is usually evaluated with P/R/F1 over links, but effective systems rely on:
 > - token blocking (label/alias tokens)
@@ -187,7 +187,7 @@ sometimes packaged as ready-made train/validation/test splits.
 - **Task**: typically EM (pairwise)
 - **Domain**: consumer items and media
 - **Ground truth**: labeled pairs
-- **Why it’s useful**: fast experimentation across multiple domains; good for ablation studies
+- **Why it's useful**: fast experimentation across multiple domains; good for ablation studies
 
 > **Note**: Names like “Books” and “Movies” can appear in multiple repositories/testbeds.
 > Always cite the repository/release and checksum the files in your experiments for reproducibility.
@@ -197,7 +197,7 @@ sometimes packaged as ready-made train/validation/test splits.
 ## Benchmarking Notes
 
 ### A) Be explicit about the ER problem you solve
-- If you evaluate on **pairwise-labeled** EM datasets, don’t claim you solved “clustering ER”.
+- If you evaluate on **pairwise-labeled** EM datasets, don't claim you solved “clustering ER”.
 - If you evaluate on clustering datasets, report cluster metrics and candidate explosion behavior.
 
 ### B) Standard metrics (pairwise EM)
@@ -236,4 +236,4 @@ This ladder gradually increases:
 ---
 
 ## Credits & License
-This document is a curated guide. Dataset licenses vary by source—always follow the original dataset license/terms.
+This document is a curated guide. Dataset licenses vary by source-always follow the original dataset license/terms.
