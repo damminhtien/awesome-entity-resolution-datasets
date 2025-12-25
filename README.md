@@ -36,7 +36,7 @@ A standard pipeline is: **blocking → feature/representation → pairwise class
 - **Why it's useful**: tiny, fast iteration; classic string/noise issues (abbreviations, punctuation, misspellings)
 - **Where used**: record linkage / entity matching baselines
 
-### 1.2 Abt-Buy
+### 1.2 Abt-Buy [![Download](https://img.shields.io/badge/Download-file.zip-blue?style=for-the-badge)](https://dbs.uni-leipzig.de/files/datasets/Abt-Buy.zip)
 - **Task**: EM (clean-clean)
 - **Domain**: E-commerce products
 - **Sources**: Abt ↔ Buy
@@ -44,7 +44,7 @@ A standard pipeline is: **blocking → feature/representation → pairwise class
 - **Ground truth**: matching product pairs
 - **Why it's useful**: realistic product matching with messy titles, model numbers, brand tokens
 
-### 1.3 Amazon-GoogleProducts
+### 1.3 Amazon-GoogleProducts [![Download](https://img.shields.io/badge/Download-file.zip-blue?style=for-the-badge)](https://dbs.uni-leipzig.de/files/datasets/Amazon-GoogleProducts.zip)
 - **Task**: EM (clean-clean)
 - **Domain**: E-commerce products
 - **Sources**: Amazon ↔ Google Products
@@ -52,7 +52,7 @@ A standard pipeline is: **blocking → feature/representation → pairwise class
 - **Ground truth**: matching product pairs
 - **Why it's useful**: classic noisy product listings across marketplaces
 
-### 1.4 DBLP-ACM
+### 1.4 DBLP-ACM  [![Download](https://img.shields.io/badge/Download-file.zip-blue?style=for-the-badge)](https://dbs.uni-leipzig.de/files/datasets/DBLP-ACM.zip)
 - **Task**: EM (clean-clean)
 - **Domain**: Bibliographic records (papers)
 - **Sources**: DBLP ↔ ACM
@@ -60,7 +60,7 @@ A standard pipeline is: **blocking → feature/representation → pairwise class
 - **Ground truth**: matching paper pairs
 - **Why it's useful**: strong textual similarity but with author formatting noise
 
-### 1.5 DBLP-Scholar
+### 1.5 DBLP-Scholar [![Download](https://img.shields.io/badge/Download-file.zip-blue?style=for-the-badge)](https://dbs.uni-leipzig.de/files/datasets/DBLP-Scholar.zip)
 - **Task**: EM (clean-clean)
 - **Domain**: Bibliographic records
 - **Sources**: DBLP ↔ Google Scholar-like dump
@@ -81,13 +81,13 @@ They are used to test:
 - **deduplication quality**
 - **runtime / memory behavior**
 
-### 2.1 Affiliations
+### 2.1 Affiliations [![Download](https://img.shields.io/badge/Download-file.zip-blue?style=for-the-badge)](https://dbs.uni-leipzig.de/files/datasets/affiliationstrings.zip)
 - **Task**: Clustering ER (single-source)
 - **Domain**: Academic affiliations (strings)
 - **Ground truth**: clusters of equivalent affiliations
 - **Why it's useful**: heavy abbreviation + reordering + multilingual variants; great for string normalization + clustering
 
-### 2.2 Geographic Settlements
+### 2.2 Geographic Settlements [![Download](https://img.shields.io/badge/Download-file.zip-blue?style=for-the-badge)](https://dbs.uni-leipzig.de/files/datasets/geographicalSettelments.zip)
 - **Task**: Clustering ER (multi-source)
 - **Domain**: Places / settlements
 - **Sources**: multiple sources (often 4)
