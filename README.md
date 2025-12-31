@@ -1,4 +1,4 @@
-# Awesome Entity Resolution Datasets (Curated, Practical, and Benchmark-Ready)
+# Awesome Entity Resolution Datasets
 
 A curated list of commonly used **Entity Resolution (ER)** datasets, grouped by the *actual task they support*.
 ER is an umbrella term-papers often mix **pairwise matching**, **deduplication/clustering**, and **knowledge-graph alignment** under one name.
