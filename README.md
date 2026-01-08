@@ -35,6 +35,9 @@ A standard pipeline is: **blocking → feature/representation → pairwise class
 - **Ground truth**: list of matching pairs (same restaurant)
 - **Why it's useful**: tiny, fast iteration; classic string/noise issues (abbreviations, punctuation, misspellings)
 - **Where used**: record linkage / entity matching baselines
+[![View Notebook](https://img.shields.io/badge/Click_here-Data_Analysis_%26_Baseline-purple?style=for-the-badge)](https://github.com/damminhtien/entity-resolution-benchmark/blob/main/restaurant/restaurant_analysis.ipynb)
+
+
 
 ### 1.2 Abt-Buy [![Download](https://img.shields.io/badge/Download-file.zip-blue?style=for-the-badge)](https://dbs.uni-leipzig.de/files/datasets/Abt-Buy.zip)
 - **Task**: EM (clean-clean)
